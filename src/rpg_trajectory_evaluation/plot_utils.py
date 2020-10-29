@@ -48,8 +48,10 @@ def boxplot_compare(ax, xlabels,
     xlims = ax.get_xlim()
     ax.set_xlim([xlims[0]-0.1, xlims[1]-0.1])
     if n_data != 1:
-        ax.legend(leg_handles, leg_labels, bbox_to_anchor=(
-            1.05, 1), loc=2, borderaxespad=0.)
+        # ax.legend(leg_handles, leg_labels, bbox_to_anchor=(
+        #     1.05, 1), loc=2, borderaxespad=0.)
+        ax.legend(leg_handles, leg_labels, bbox_to_anchor=(0, 1.03, 1, 1.5),
+                  loc=8, ncol=3, borderaxespad=0.)
     map(lambda x: x.set_visible(False), leg_handles)
 
 

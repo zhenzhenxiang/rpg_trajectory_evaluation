@@ -43,4 +43,10 @@ def load_stamped_dataset(results_dir, max_diff=0.02):
     q_gt = np.array(q_gt)
     t_gt = np.array(t_gt)
 
+    # swap x and y axis for horizontal layout
+    # p_es[:, [0, 1]] = p_es[:, [1, 0]]
+    # p_gt[:, [0, 1]] = p_gt[:, [1, 0]]
+    # p_es[:, 1] = -p_es[:, 1]
+    # p_gt[:, 1] = -p_gt[:, 1]
+
     return t_gt, p_es, q_es, t_gt, p_gt, q_gt
